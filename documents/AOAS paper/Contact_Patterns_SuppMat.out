@@ -1,9 +1,0 @@
-\BOOKMARK [1][-]{section.1}{Exploratory analyses}{}% 1
-\BOOKMARK [1][-]{section.2}{Data pre-processing}{}% 2
-\BOOKMARK [1][-]{section.3}{Node IDs}{}% 3
-\BOOKMARK [1][-]{section.4}{Construction of the R matrix}{}% 4
-\BOOKMARK [1][-]{section.5}{Running the model with INLA}{}% 5
-\BOOKMARK [1][-]{section.6}{Aggregating contact intensities and rates}{}% 6
-\BOOKMARK [2][-]{subsection.6.1}{Aggregation over sexes}{section.6}% 7
-\BOOKMARK [2][-]{subsection.6.2}{Aggregation over ages}{section.6}% 8
-\BOOKMARK [1][-]{section.7}{Table with contact intensities and contact rates}{}% 9
