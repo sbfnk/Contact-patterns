@@ -86,18 +86,18 @@ legend("topleft", legend = "b", bty = "n", adj = 2)
 #
 
 # Settings
-cols.line <- brewer.pal(n = 9, "Set1")[c(2, 5)] # Color for males and females: lines
-cols.line[2] <- "gold2"
+ticks <- seq(0, 80, 10) # Tick locations
+cols.line <- c(brewer.pal(n = 9, "Set1")[2], "gold2") # Color for males and females: lines
 cols.bord <- adjustcolor(cols.line, alpha = 0.5)
 
 # Open connection to eps
 setEPS(horizontal = FALSE, onefile = FALSE, paper = "special")
-cairo_ps(file = "fig_relative_infection_incidence.eps", width = 7, height = 7)
+cairo_ps(file = "results/fig_relative_infection_incidence.eps", width = 7, height = 7)
 
 # Males and Female separate
 par(mar = c(4, 4, 0.3, 0.3), mgp = c(2.5, 1, 0), xaxs = "r", yaxs = "r")
 plot.new(); plot.window(xlim = c(0, 80), ylim = c(0, max(v.stat)))
-polygon(c(age, rev(age)), c(v.stat[1:n.age, 1],               rev(v.stat[1:n.age, 3])),             col = cols.bord[1], border = NA)
+polygon(c(age, rev(age)), c(v.stat[1:n.age, 1],               rev(v.stat[1:n.age, 3])),               col = cols.bord[1], border = NA)
 polygon(c(age, rev(age)), c(v.stat[(n.age + 1):(2*n.age), 1], rev(v.stat[(n.age + 1):(2*n.age), 3])), col = cols.bord[2], border = NA)
 matlines(age, cbind(v.stat[1:n.age, 2], v.stat[(n.age + 1):(2*n.age), 2]), col = cols.line[1:2], lwd = 1, lty = 1, lend = "butt")
 title(xlab = "Age", ylab = "Relative infection incidence")
